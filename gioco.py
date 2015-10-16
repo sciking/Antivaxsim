@@ -127,15 +127,44 @@ Menù di gioco \n
 			print "Perdi la causa e spendi 10000€ di spese legali"
 			soldi = soldi - 10000
 	elif kappa == 4:
-			print "Dai 1000€ a dei blog fuffari"
-			soldi = soldi - 1000
-			adepti = adepti + 25
+		print "Dai 1000€ a dei blog fuffari"
+		soldi = soldi - 1000
+		adepti = adepti + 25
 	elif kappa == 5:
-			print "Minacci di denuncia i debunker"
-			adepti = adepti + random.randint(-5,5)
-			ukulele = random.randint(-15,15)
-			vaccinati = vaccinati + ukulele
-			nonvaccinati = nonvaccinati - ukulele
+		print "Minacci di denuncia i debunker"
+		adepti = adepti + random.randint(-5,5)
+		ukulele = random.randint(-15,15)
+		vaccinati = vaccinati + ukulele
+		nonvaccinati = nonvaccinati - ukulele
+	elif kappa == 6:
+		print """Che campagna vuoi avviare?
+1) Rivista (1000€)
+2) Trasmissione TV (2000€)
+3) Blog fuffaro (5000€)
+4) Famiglia finta (10000€)
+5) Esci
+"""
+		camp = input(">")
+		if camp == 1:
+			adepti = adepti + 30
+			soldi = soldi - 1000
+		elif camp == 2:
+			adepti = adepti + 40
+			nonvaccinati = nonvaccinati + 2
+			vaccinati = vaccinati - 2
+			soldi = soldi - 2000
+		elif camp == 3:
+			adepti = adepti + 50
+			nonvaccinati = nonvaccinati + 4
+			vaccinati = vaccinati - 4
+			soldi = soldi - 5000
+		elif camp == 4:
+			adepti = adepti + 50
+			nonvaccinati = nonvaccinati + 5
+			vaccinati = vaccinati - 5
+			soldi = soldi - 10000
+			
+			
 
 	raw_input("Premi invio per continuare")
 		
