@@ -18,7 +18,7 @@ def poss():
 	global morti
 	global konrad
 	global vaccinati, popolazione, nonvaccinati, turno
-	konrad = random.randint(1,5) 
+	konrad = random.randint(1,6) 
 	if turno%2 == 0:
 		if konrad == 1:
 			print "Perdi una causa in appello, e paghi 15000€ di spese"
@@ -41,6 +41,9 @@ def poss():
 			print "Il ministro della Salute attua misure molto restrittive contro i non vaccinati"
 			vaccinati = vaccinati + 15
 			nonvaccinati = nonvaccinati - 15
+		elif konrad == 6:
+			print "Dichiari a 'Sputnik' che i vaccini sono sostituibili da rimedi dolci omeobiotici, guarda caso venduti da te! I fessi pagano"
+                        soldi = soldi + 1000
 	else:
 		if konrad == 1:
 			print "Riesci a diffondere la notizia che i vaccini causano autismo, con uno studio falso"
@@ -63,6 +66,9 @@ def poss():
 		elif konrad == 5:
 			print "Sfidi i medici a chi dimostra l'esistenza del morbillo. Lo dimostrano e devi pagare 10000€"
 			soldi = soldi - 10000
+		elif konrad == 6:
+		        print "Il Dottor Andrea Camposveglio, noto per le sue scoperte antivacciniste, è stato scoperto mentre accettava mazzette, in palese conflitto \n d'interesse. L'antivaccinismo indietreggia"
+                        adepti = int(adepti/2)
 	gioco()
 def gioco():
 	global adepti
@@ -172,5 +178,7 @@ Menù di gioco \n
 	poss()	
 def essit():
 	print "Il gioco è finito. Spero ti sia  piaciuto."
+	punto = soldi + (morti*2)+random.randint(1,150)
+	print "Il tuo ciarlapunteggio è", punto,"!"
 	exit()
 gioco()
